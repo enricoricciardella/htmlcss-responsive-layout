@@ -1,24 +1,33 @@
 /* RESET */
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-img{
+img {
     max-width: 100%;
 }
-body{
+
+body {
     font-family: "Montserrat", sans-serif;
 
+}
+hr {
+    width: 30%;
+    color: black;
+    padding-top: 10px;
 }
 
 /* COMMON */
 /* Layout */
-.section{
-    background-color: bisque;
+.section {
+    /* background-color: #F6F5F3; */
+    /* da rimettere quello sopra */
+    background-color: #aaa7a0;
 }
-.header-title{
+
+.header-title {
     height: 50px;
     font-family: "Nerko One", cursive;
     display: flex;
@@ -30,7 +39,7 @@ body{
     background-color: #ffffff;
 }
 
-.container{
+.container {
     width: 80%;
     /* height: 700px; */
     margin: auto;
@@ -39,20 +48,79 @@ body{
     /* debug */
     border: 1px solid #0000ff
 }
-.hidden-title{
+
+.hidden-title {
     display: none;
 }
-.video-youtube{
+
+.video-youtube {
     padding-top: 10px;
     display: flex;
     justify-content: center;
-    align-items: center; 
+    align-items: center;
     width: 100%;
     height: auto;
     aspect-ratio: 4/3;
 }
 
+/* INFO UTILI SOTTO VIDEO */
+.info-utili {
+    background-color: #ffffff;
+    padding: 10px;
+    font-size: 0.8em;
+    padding-top: 20px;
 
+    /* debug */
+    border: 1px solid black;
+}
+
+.info-utili li {
+    margin-top: 10px;
+    list-style: none;
+}
+
+.info-utili span {
+    font-weight: bold;
+}
+
+/* ICONE */
+.icone {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    font-size: 1em;
+}
+
+.icone div {
+    padding: 3px;
+    border: 1px solid black;
+    border-radius: 10px 10px;
+    padding-left: 8px;
+    padding-right: 8px;
+    background-color: white;
+}
+
+.icone span {
+    display: none;
+}
+
+/* BANNER */
+.banner-photo {
+    display: none;
+}
+
+
+/* PRESENTATION */
+.presentation{
+    padding-top: 20px;
+}
+.photo-presentation{
+    padding: 20px;
+}
+.text-presentation{
+    padding-top: 10px;
+    font-size: 0.8em;
+}
 
 
 
@@ -63,17 +131,75 @@ body{
 
 /* *****RESPONSIVE***** */
 /* Layout */
-/* Rendo il titolo responsive */
+/* Rendo il titolo responsive da 768px*/
 @media screen and (min-width:768px) {
-    .header-title{
+    .header-title {
         display: flex;
         justify-content: flex-start;
     }
-    .hidden-title{
+
+    /* CREO IL TITOLO LUNGO DA 768 IN POI */
+    .hidden-title {
         display: inline-block;
     }
-    .video-youtube{
+
+    .video-youtube {
         aspect-ratio: 4/3;
     }
-    
+
+    .info-utili li {
+        flex-wrap: wrap;
+        width: calc(100% / 3);
+
+    }
+
+    /* ALLUNGO LE ICONE */
+    .icone div {
+        border-radius: 10px 10px;
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    /* VOGLIO CHE IL BANNER COMPARE */
+    .banner-photo {
+        padding-top: 20px;
+        display: flex;
+    }
 }
+
+
+
+
+/* RESPONSIVE DA DESKTOP */
+@media screen and (min-width:1200px) {
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+
+    }
+
+    .left {
+        width: 70%;
+        aspect-ratio: 16/9;
+
+    }
+
+    .right {
+        width: 30%;
+    }
+
+    .info-utili {
+        margin-top: 52px;
+    }
+
+    .video-youtube {
+        aspect-ratio: 4/3;
+    }
+
+    /* ICONE  */
+    .icone div span {
+        border-radius: 10px 10px;
+        display: inline-block;
+        justify-content: space-between;
+
+    }
