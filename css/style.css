@@ -165,6 +165,13 @@ hr {
         padding-top: 20px;
         display: flex;
     }
+    
+    .photo-presentation{
+        width: 50%;
+        float: left;
+    }
+  
+
 }
 
 
@@ -203,3 +210,8 @@ hr {
         justify-content: space-between;
 
     }
+    .photo-presentation{
+        width: 30%;
+        float: left
+    }
+}
